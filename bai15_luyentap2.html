@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // // bai 1:
+    // function square(number){
+    //     return  number*number;
+    // }
+    // let num = parseFloat("nhập 1 số: ");
+    // let result = square(num);
+    // console.log("bình phương của num = :" + result);
+    //bài 2:
+   //  function perimeter(num){
+   //      return 2*num*Math.PI;
+   //  }
+   // function acreage(num){
+   //      return Math.PI*Math.pow(num,2);
+   // }
+   // let r;
+   // do {
+   //    r = +prompt("nhập bán kính r: ")
+   //         if(isNaN(r)){
+   //             alert("mời bạn nhập lại, bán kính r là số.")
+   //     }
+   // }while (isNaN(r));
+   //  let chu_vi = perimeter(r);
+   //  let dien_tich = acreage(r);
+   //  document.write("chu vi hình tròn bán kính " + r + " = "+ chu_vi + "<br>");
+   //  document.write("diện tích hình tròn bán kính " + r + " = "+ dien_tich + "<br>");
+    //bài 3:
+
+   // function factorial(n){
+   //     if (n === 0 || n === 1) {
+   //         return 1; // Giai thừa của 0 và 1 là 1
+   //     } else if (n < 0) {
+   //         return "Không tính được giai thừa cho số âm";
+   //     } else {
+   //         let result = 1;
+   //         for (let i = 2; i <= n; i++) {
+   //             result *= i;
+   //         }
+   //         return result;
+   //     }
+   // }
+   // let num;
+   // do {
+   //     num = +prompt("Nhập số tính giai thừa: ");
+   //     if(isNaN(num) || !Number.isInteger(num)){
+   //         alert("mời bạn nhập lại.")
+   //     }
+   // }while(isNaN(num) || !Number.isInteger(num));
+   // let result = factorial(num);
+   // document.write("giai thừa của " + num + " = " + result);
+    //bai 4:
+    // function check(char) {
+    //     return !isNaN(char) && char !== ' ' && char !== '';
+    // }
+    // let inputChar = prompt("Nhập một ký tự:");
+    //
+    // if (check(inputChar) === true) {
+    //     alert(inputChar+ "là một ký tự số.");
+    // } else {
+    //     alert(inputChar + "không phải là một ký tự số.");
+    // }
+    // bai 5:
+    // function minNumber(arr){
+    //     let min = arr[0];
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if(arr[i] < min){
+    //             min = arr[i];
+    //         }
+    //     }
+    //     return min;
+    // }
+    // let length;
+    // do {
+    //      length = +prompt( "nhập độ dài cho mảng: ")
+    //     if(isNaN(length) || length <= 0 || !Number.isInteger(length)){
+    //         alert("độ dài mảng là 1 số nguyên dương");
+    //     }
+    // }while (isNaN(length) || length <= 0 || !Number.isInteger(length));
+    // let arr = [];
+    // for (let i = 0; i < length; i++) {
+    //     arr[i] = prompt("nhập giá trị phần tử cho mảng (là số): ");
+    //     if(isNaN(arr[i])){
+    //         alert("mời bạn nhập sô.")
+    //     }
+    // }
+    // let result = minNumber(arr);
+    // document.write("số nhỏ nhất trong mảng là:  "+result);
+    // bai 6:
+    // function check(number){
+    //     return Number.isInteger(number) && number > 0 && !isNaN(number);
+    // }
+    // let inputChar = +prompt("nhập vào kí tự kiểm tra: ");
+    // if(check(inputChar) === true){
+    //     alert("là số nguyên dương");
+    // }else{
+    //     alert("ko phải là số nguyên dương");
+    // }
+    // //bai 7:
+    // function swapNumber(a, b){
+    //     let temp = a;
+    //     a = b ;
+    //     b = temp;
+    //     return [a, b];
+    // }
+    // let num1 = 5;
+    // let num2 = 9;
+    // let number = swapNumber(num1, num2);
+    // document.write(number);
+    // bai 8:
+    // function reverseArr(Arr) {
+    //     let reverseArr = arr.reverse();
+    //     return reverseArr;
+    // }
+    // let length;
+    // let arr = [];
+    // do {
+    //     length = +prompt(" nhập độ dài của mảng:")
+    //     if (isNaN(length) || !Number.isInteger(length) || length <= 0) {
+    //         alert("bạn đã nhập sai, mời bạn nhập 1 số nguyên dương");
+    //     }
+    // } while (isNaN(length) || !Number.isInteger(length) || length <= 0);
+    // for (let i = 0; i < length; i++) {
+    //     arr[i] = +prompt("nhập giá trị vào mảng: ");
+    //     if (isNaN(arr[i]) || !Number.isInteger(arr[i])) {
+    //         alert("mời bạn nhập lại 1 số nguyên.");
+    //     }
+    // }
+    // let reverse_Arr = reverseArr(arr);
+    // document.write(reverse_Arr);
+    //bai 9:
+    function check(arr, char){
+        count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i] === char){
+                count++;
+            }
+        }
+        return count;
+    }
+    let length;
+    let arr1 = [];
+    do {
+        length = +prompt(" nhập độ dài của mảng:")
+        if (isNaN(length) || !Number.isInteger(length) || length <= 0) {
+            alert("bạn đã nhập sai, mời bạn nhập 1 số nguyên dương");
+        }
+    } while (isNaN(length) || !Number.isInteger(length) || length <= 0);
+    for (let i = 0; i < length; i++) {
+        arr1[i] = prompt("nhập giá trị vào mảng: ");
+        }
+    let char1 = prompt("nhập kí tự muốn kiểm tra: ");
+    let checkChar = check(arr1, char1);
+    if(checkChar > 0){
+        alert("kí tự : " + char1 + " có xuất hiện trong mảng arr1");
+    }else{
+        alert("kí tự : " + char1 + " ko xuất hiện trong mảng arr1");
+    }
+
+</script>
+</body>
+</html>
